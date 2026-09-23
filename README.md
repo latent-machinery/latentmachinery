@@ -1,2 +1,3 @@
-# latentmachinery
-latentmachinery.com — Latent Machinery LLC site
+# latentmachinery.com
+
+Static site for Latent Machinery LLC. Single `index.html`, no build step. Deployed on Vercel.

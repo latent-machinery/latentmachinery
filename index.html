@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latent Machinery LLC</title>
+<meta name="description" content="Latent Machinery LLC is a Portland, Oregon software consultancy that designs, builds, and maintains AI-assisted operational systems for small businesses and founder-led teams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1E3A5F; --navy-dark: #162D4A; --ink: #2C3E50; --muted: #6B7B8C; --faint: #9CA3AF;
+    --bg: #FFFFFF; --surface: #F8F9FA; --grid: #E8ECEF; --border: #E5E7EB;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--ink); background: var(--bg);
+    background-image: radial-gradient(var(--grid) 1px, transparent 1px);
+    background-size: 12px 12px; line-height: 1.6; font-size: 16px;
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  @media (min-width: 768px) { .wrap { padding: 0 48px; } }
+  header { height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-weight: 500; font-size: 14px; color: var(--ink); letter-spacing: 0.02em; text-decoration: none; }
+  .brand span { display: inline-block; width: 8px; height: 8px; background: var(--navy); border-radius: 2px; margin-right: 10px; vertical-align: 1px; }
+  nav a { font-size: 14px; font-weight: 500; color: var(--ink); text-decoration: none; margin-left: 24px; }
+  nav a:hover { color: var(--navy); }
+  .hero { padding: 96px 0 64px; }
+  .badge { display: inline-block; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 6px 12px; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 24px; }
+  .badge::before { content: "\25CF"; color: var(--navy); margin-right: 8px; font-size: 8px; vertical-align: 2px; }
+  h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 48px; line-height: 1.1; letter-spacing: -0.01em; max-width: 640px; margin: 0 0 24px; color: var(--ink); }
+  @media (min-width: 768px) { h1 { font-size: 64px; line-height: 1.0; letter-spacing: -0.02em; } }
+  .lead { font-size: 18px; color: var(--muted); max-width: 600px; margin: 0 0 32px; }
+  .btn { display: inline-block; background: var(--navy); color: #fff; font-size: 14px; font-weight: 500; padding: 12px 24px; border-radius: 6px; text-decoration: none; transition: background 150ms ease; }
+  .btn:hover { background: var(--navy-dark); }
+  .btn::after { content: "\2192"; margin-left: 8px; }
+  section.services { background: var(--surface); padding: 64px 0; }
+  .label { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 32px; }
+  .grid { display: grid; gap: 32px; grid-template-columns: 1fr; }
+  @media (min-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+  h3 { font-family: "Playfair Display", Georgia, serif; font-size: 24px; font-weight: 700; margin: 0 0 12px; color: var(--ink); }
+  .grid p { margin: 0; color: var(--muted); }
+  section.how { padding: 64px 0; }
+  section.how p { max-width: 640px; color: var(--muted); }
+  footer { border-top: 1px solid var(--border); padding: 32px 0 48px; font-size: 14px; color: var(--muted); }
+  footer a { color: var(--ink); text-decoration: none; }
+  footer a:hover { color: var(--navy); }
+  footer .row { display: flex; flex-wrap: wrap; gap: 8px 32px; justify-content: space-between; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="/"><span></span>Latent Machinery</a>
+    <nav><a href="#services">Services</a><a href="#how">How we work</a><a href="mailto:hello@latentmachinery.com">Contact</a></nav>
+  </header>
+
+  <section class="hero">
+    <div class="badge">Portland, Oregon</div>
+    <h1>Operational software for small teams, built to keep running.</h1>
+    <p class="lead">Latent Machinery is a software consultancy. We design, build, and maintain AI-assisted systems that take recurring work off founder-led businesses: intake, reporting, follow-up, and the operational memory that ties them together.</p>
+    <a class="btn" href="mailto:hello@latentmachinery.com">Start a conversation</a>
+  </section>
+</div>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <p class="label">Services</p>
+    <div class="grid">
+      <div><h3>Build</h3><p>Custom systems scoped to one job that matters: a workflow, a data pipeline, an assistant that does real work. Fixed-scope projects with a defined deliverable.</p></div>
+      <div><h3>Operate</h3><p>Monthly retainers for teams that need someone to own the systems after launch: monitoring, changes, and the judgment calls software can't make on its own.</p></div>
+      <div><h3>Advise</h3><p>Fractional technical leadership for founders deciding what to build, what to buy, and what to leave alone.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <p class="label">How we work</p>
+    <p>Engagements are remote and run under a written services agreement. Projects are quoted as a fixed scope; retainers bill monthly. Invoices are paid by bank transfer. Clients keep ownership of everything built for them and of the data it runs on.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div>Latent Machinery LLC &middot; Portland, Oregon</div>
+      <div><a href="mailto:hello@latentmachinery.com">hello@latentmachinery.com</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
