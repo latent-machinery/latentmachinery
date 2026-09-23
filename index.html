@@ -2,144 +2,137 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Machinery · Someone should be accountable for AI at your company</title>
-<meta name="description" content="Machinery is a Portland firm. Every morning you get a brief on your business that's actually right. Before every meeting, prep shows up. Your records stay current. When something's wrong, we catch it first. Latent Machinery LLC.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#EDBA0C">
+<title>Machinery · Accountable AI for founder-led businesses</title>
+<meta name="description" content="Machinery is a Portland firm that runs the AI behind a founder-led business and answers for it when it's wrong. Latent Machinery LLC.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #1E3A5F; --navy-dark: #162D4A; --ink: #2C3E50; --muted: #6B7B8C; --faint: #9CA3AF;
-    --bg: #FFFFFF; --surface: #F8F9FA; --grid: #E8ECEF; --border: #E5E7EB;
+    color-scheme: light;
+    --yellow: #EDBA0C; --black: #1A1A1A; --body: #574E41; --fine: #3D3A33; --gold-hover: #D4A60A;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: var(--yellow);
   }
-  * { box-sizing: border-box; }
+  *, *::before, *::after { box-sizing: inherit; }
   html, body { margin: 0; }
-  body {
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
-    color: var(--ink); background: var(--bg);
-    background-image: radial-gradient(var(--grid) 1px, transparent 1px);
-    background-size: 12px 12px; line-height: 1.6; font-size: 16px;
-  }
-  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-  @media (min-width: 768px) { .wrap { padding: 0 48px; } }
-  header { height: 64px; display: flex; align-items: center; justify-content: space-between; }
-  .brand { font-weight: 500; font-size: 14px; color: var(--ink); letter-spacing: 0.02em; text-decoration: none; }
-  .brand span { display: inline-block; width: 8px; height: 8px; background: var(--navy); border-radius: 2px; margin-right: 10px; vertical-align: 1px; }
-  nav a { font-size: 14px; font-weight: 500; color: var(--ink); text-decoration: none; margin-left: 24px; }
-  nav a:hover { color: var(--navy); }
-  .hero { padding: 96px 0 72px; }
-  .badge { display: inline-block; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 6px 12px; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 24px; }
-  .badge::before { content: "\25CF"; color: var(--navy); margin-right: 8px; font-size: 8px; vertical-align: 2px; }
-  h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 44px; line-height: 1.1; letter-spacing: -0.01em; max-width: 720px; margin: 0 0 24px; color: var(--ink); }
-  @media (min-width: 768px) { h1 { font-size: 64px; line-height: 1.0; letter-spacing: -0.02em; } }
-  .lead { font-size: 18px; color: var(--muted); max-width: 640px; margin: 0 0 32px; }
-  .btn { display: inline-block; background: var(--navy); color: #fff; font-size: 14px; font-weight: 500; padding: 12px 24px; border-radius: 6px; text-decoration: none; transition: background 150ms ease; }
-  .btn:hover { background: var(--navy-dark); }
-  .btn::after { content: "\2192"; margin-left: 8px; }
-  section { padding: 64px 0; }
-  section.alt { background: var(--surface); }
-  .label { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 32px; }
-  h2 { font-family: "Playfair Display", Georgia, serif; font-size: 32px; font-weight: 700; line-height: 1.2; margin: 0 0 16px; max-width: 720px; }
-  h3 { font-family: "Playfair Display", Georgia, serif; font-size: 22px; font-weight: 700; margin: 0 0 8px; color: var(--ink); }
-  .grid { display: grid; gap: 32px; grid-template-columns: 1fr; }
-  @media (min-width: 768px) { .grid.four { grid-template-columns: repeat(2, 1fr); } .grid.three { grid-template-columns: repeat(3, 1fr); } }
-  @media (min-width: 1024px) { .grid.four { grid-template-columns: repeat(4, 1fr); } }
-  .grid p { margin: 0; color: var(--muted); }
-  .when { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; color: var(--navy); margin: 0 0 8px; }
-  .prose { max-width: 640px; color: var(--muted); }
-  .prose p { margin: 0 0 16px; }
-  .line { font-family: "Playfair Display", Georgia, serif; font-size: 24px; color: var(--ink); margin: 24px 0 0; }
-  ul.plain { list-style: none; padding: 0; margin: 0; max-width: 640px; }
-  ul.plain li { padding: 12px 0; border-top: 1px solid var(--border); color: var(--muted); }
-  ul.plain li:last-child { border-bottom: 1px solid var(--border); }
-  footer { border-top: 1px solid var(--border); padding: 32px 0 48px; font-size: 14px; color: var(--muted); }
-  footer a { color: var(--ink); text-decoration: none; }
-  footer a:hover { color: var(--navy); }
-  footer .row { display: flex; flex-wrap: wrap; gap: 8px 32px; justify-content: space-between; }
-  footer p { margin: 8px 0 0; max-width: 720px; }
+  body { background: var(--yellow); color: var(--body); font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 17px; line-height: 1.6; -webkit-text-size-adjust: 100%; }
+
+  .wrap { max-width: 1100px; margin-inline: auto; padding-inline: 24px; }
+  @media (min-width: 768px) { .wrap { padding-inline: 48px; } }
+
+  header .wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; padding-bottom: 24px; }
+  .brand { font-weight: 900; font-size: 18px; letter-spacing: -0.01em; color: var(--black); text-decoration: none; }
+  header a.contact { font-weight: 600; font-size: 16px; color: var(--black); text-decoration: none; padding: 10px 0; }
+  header a.contact:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+  h1, h2, h3 { color: var(--black); margin: 0; text-wrap: balance; }
+  h1 { font-weight: 900; font-size: clamp(38px, 10vw, 72px); line-height: 1.0; letter-spacing: -0.02em; max-width: 12em; margin-bottom: 24px; }
+  h2 { font-weight: 700; font-size: clamp(30px, 7vw, 42px); line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 16px; }
+  h3 { font-weight: 700; font-size: 20px; line-height: 1.3; margin-bottom: 12px; }
+  p { margin: 0; }
+
+  .hero { padding-top: 40px; padding-bottom: 96px; }
+  @media (min-width: 768px) { .hero { padding-top: 96px; padding-bottom: 128px; } }
+  .hero .sub { font-size: clamp(17px, 2.4vw, 20px); line-height: 1.5; max-width: 34em; margin-bottom: 32px; }
+
+  section { padding-top: 80px; padding-bottom: 80px; }
+  @media (min-width: 768px) { section { padding-top: 112px; padding-bottom: 112px; } }
+  .head { text-align: center; max-width: 40em; margin-inline: auto; }
+  .head p { font-size: 16px; line-height: 1.5; }
+
+  .grid { display: grid; grid-template-columns: 1fr; gap: 48px 32px; margin-top: 56px; }
+  .grid > * { min-width: 0; }
+  .grid p { font-size: 16px; max-width: 300px; }
+  @media (min-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .coda { text-align: center; font-size: 16px; line-height: 1.5; max-width: 34em; margin: 56px auto 0; }
+  .line { text-align: center; font-weight: 700; font-size: 20px; line-height: 1.35; color: var(--black); max-width: 22em; margin: 40px auto 0; text-wrap: balance; }
+  .center { text-align: center; }
+
+  .btn { display: inline-block; background: var(--black); color: #FFFFFF; font-weight: 600; font-size: 16px; line-height: 1.2; padding: 14px 32px; border-radius: 999px; text-decoration: none; transition: transform 150ms ease, opacity 150ms ease; }
+  .btn:hover { opacity: 0.9; transform: scale(1.02); }
+  section .btn { margin-top: 32px; }
+
+  a:focus-visible { outline: 2px solid var(--black); outline-offset: 3px; }
+
+  footer .wrap { padding-top: 48px; padding-bottom: 48px; font-size: 14px; line-height: 1.5; color: var(--fine); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 32px; }
+  footer a { color: var(--fine); text-decoration: underline; text-underline-offset: 3px; }
+  footer a:hover { color: var(--black); }
+
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <a class="brand" href="/"><span></span>Machinery</a>
-    <nav><a href="#get">What you get</a><a href="#stand">Where we stand</a><a href="#start">Start</a></nav>
-  </header>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/">Machinery</a>
+    <a class="contact" href="mailto:hello@latentmachinery.com">Contact</a>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="badge">Portland, Oregon</div>
-    <h1>Someone should be accountable for AI at your company. That's us.</h1>
-    <p class="lead">Every morning you get a brief on your business that's actually right. Before every meeting, prep shows up. Your records stay current without anyone maintaining them. You didn't prompt anything. And when something's wrong, we catch it and tell you before you find out.</p>
-    <a class="btn" href="#start">See how it starts</a>
+<main>
+  <div class="wrap hero">
+    <h1>Someone should be accountable for the AI at your company.</h1>
+    <p class="sub">Machinery is a new firm in Portland. We run the AI behind a founder-led business, and we answer for it when it's wrong.</p>
+    <a class="btn" href="mailto:hello@latentmachinery.com?subject=Two-week%20shadow">Ask for a shadow</a>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <h2>Most AI is sold as software.</h2>
+        <p>When it's wrong, that's on you. We run it as a service instead, which changes who notices a mistake and who fixes it.</p>
+      </div>
+      <div class="grid">
+        <div><h3>Informed</h3><p>What changed, and the decisions waiting on you, with the context to make them.</p></div>
+        <div><h3>Prepared</h3><p>Before every meeting: who they are, what you last said, and what you owe each other.</p></div>
+        <div><h3>In the loop</h3><p>Who promised what, and what got decided, kept current from the calls and email you already have.</p></div>
+      </div>
+      <p class="coda">Nothing to open and nothing to prompt. It knows more about your business every month.</p>
+    </div>
   </section>
-</div>
 
-<section class="alt" id="get">
-  <div class="wrap">
-    <p class="label">What you get</p>
-    <div class="grid four">
-      <div><p class="when">Every morning</p><h3>The brief</h3><p>What moved, what's on today, what needs a decision. Short, and right.</p></div>
-      <div><p class="when">Five minutes before</p><h3>Meeting prep</h3><p>Who they are, what you last said, what you owe each other. It arrives before the call, not after you go looking.</p></div>
-      <div><p class="when">Always current</p><h3>Your records</h3><p>Clients, commitments, decisions. Kept up to date from the calls and email that already happen. Nobody types anything in.</p></div>
-      <div><p class="when">Any time</p><h3>The ledger</h3><p>What you promised, what was promised to you, and how long each has been open.</p></div>
+  <section>
+    <div class="wrap">
+      <div class="head"><h2>How we work</h2></div>
+      <div class="grid">
+        <div><h3>Your records are yours</h3><p>Plain, readable files in no proprietary format. Take them anywhere, whenever you want.</p></div>
+        <div><h3>We say when it's wrong</h3><p>Silent-wrong AI is worse than no AI. Misses get announced, and each one becomes a permanent check.</p></div>
+        <div><h3>A human answers for it</h3><p>Every output has a real person behind it who stands by the work and owns it when it's wrong.</p></div>
+      </div>
     </div>
-    <p class="prose" style="margin-top:32px">It knows more about your business every month. You will never open a chat window to get any of this.</p>
-  </div>
-</section>
+  </section>
 
-<section id="stand">
-  <div class="wrap">
-    <p class="label">Where we stand</p>
-    <div class="grid three">
-      <div><h3>You hold everything, always.</h3><p>A plain copy of everything we know about your business lives in your own Google Drive, synced daily. Your records, your property, on paper. Leaving us requires nothing from us.</p></div>
-      <div><h3>When it's wrong, we say so first.</h3><p>Silent-wrong AI is worse than no AI. We show you exactly what's being watched and what isn't. Misses get announced, not buried. Every mistake becomes a permanent check, so the service gets more reliable every month.</p></div>
-      <div><h3>A firm, not a product.</h3><p>When the brief is wrong, someone is responsible, and he has a name. Retainers, not licenses. We sign our name to the output.</p></div>
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <h2>Built for founder&#8209;led firms</h2>
+        <p>Five to fifty people, where the founder is still the company's memory. Relationship businesses especially: agencies, recruiting, law, consulting. We don't build chatbots, and nothing we build writes to your clients as you.</p>
+      </div>
+      <p class="line">AI does the remembering and preparing. You do the relating.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="alt" id="who">
-  <div class="wrap">
-    <p class="label">Who this is for</p>
-    <div class="prose">
-      <p>Founder-led companies, roughly five to fifty people, where the founder is still the company's memory. Everything routes through you. You've tried AI, it burned you once, and now it's a low hum of guilt.</p>
-      <p>We do best with relationship businesses: agencies, recruiting, law, wealth management, consulting, insurance and accounting practices. The firm's real asset lives in people's heads and walks out the door. We keep it in the building.</p>
-      <p>Compare us to the ops manager or chief of staff you're deciding whether you can afford. We deliver the remembering half of that job.</p>
+  <section>
+    <div class="wrap center">
+      <div class="head">
+        <h2>Start with a two&#8209;week shadow.</h2>
+        <p>Connect your email and calendar, and see what it surfaces. Decide after.</p>
+      </div>
+      <a class="btn" href="mailto:hello@latentmachinery.com?subject=Two-week%20shadow">Ask for a shadow</a>
     </div>
-  </div>
-</section>
-
-<section id="not">
-  <div class="wrap">
-    <p class="label">What we won't build</p>
-    <ul class="plain">
-      <li>Chatbots</li>
-      <li>AI strategy decks</li>
-      <li>One-off automations</li>
-      <li>Anything you have to remember to use</li>
-      <li>Anything that writes to your clients as you</li>
-    </ul>
-    <p class="line">AI does the remembering and the preparing. You do the relating.</p>
-  </div>
-</section>
-
-<section class="alt" id="start">
-  <div class="wrap">
-    <p class="label">How it starts</p>
-    <h2>Two weeks. Connect your email and calendar. The brief shows up. Decide after.</h2>
-    <p class="prose">One call, one Google sign-in, under an hour of your time. No new accounts, no new habits. If the brief isn't right by the end of two weeks, you owe us nothing and you keep the copy.</p>
-    <a class="btn" href="mailto:hello@latentmachinery.com">Ask for the two-week shadow</a>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer>
   <div class="wrap">
-    <div class="row">
-      <div>Machinery is Latent Machinery LLC &middot; Portland, Oregon</div>
-      <div><a href="mailto:hello@latentmachinery.com">hello@latentmachinery.com</a></div>
-    </div>
-    <p>Technology consulting and implementation: systems design, software development, automation, and ongoing operation for founder-led businesses. Engagements run remotely under a written services agreement and bill as a monthly retainer, paid by bank transfer. Clients own their data and everything built for them.</p>
+    <p>Latent Machinery LLC, Portland, Oregon. Managed AI operations for founder-led businesses, billed as a monthly retainer.</p>
+    <a href="mailto:hello@latentmachinery.com">hello@latentmachinery.com</a>
   </div>
 </footer>
 </body>
